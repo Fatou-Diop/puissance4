@@ -1,6 +1,6 @@
 package fr.unice.miage;
 
-public class Board {
+public class Board implements IBoard {
 	//on suppose le tableau carré
     private char[][] board;
 
