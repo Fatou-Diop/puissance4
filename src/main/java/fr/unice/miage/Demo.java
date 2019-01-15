@@ -1,7 +1,7 @@
 package fr.unice.miage;
 import fr.unice.miage.*;
 
-public class Demo implements IDemo{
+public class Demo {
 
 	
 	 public final static int vide = 0;
