@@ -2,7 +2,7 @@ package fr.unice.miage;
 
 public class Board implements IBoard {
 	//on suppose le tableau carré
-    private char[][] board;
+    public char[][] board;
 
     public void initialize(int taille) {
     	board = new char[taille][taille];
