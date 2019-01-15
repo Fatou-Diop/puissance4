@@ -1,8 +1,10 @@
 package fr.unice.miage;
+import fr.unice.miage.*;
 
-public class Board {
+
+public class Board implements IBoard {
 	//on suppose le tableau carré
-    private char[][] board;
+    public char[][] board;
 
     public void initialize(int taille) {
     	board = new char[taille][taille];
@@ -34,9 +36,11 @@ public class Board {
     	return s;
     }
 
+    
     public static void main(String[] args) {
   		Board b = new Board();
   		b.initialize(10);
+  	
   		System.out.println(b);
   		try {
   			b.jouer(0, 'x');
@@ -45,6 +49,9 @@ public class Board {
   			for(int i=0;i<10;i++) {
   				b.jouer(1, 'x');
   				System.out.println(b);
+  				Joueur junior = new Joueur();
+  				Partie p = new Partie(junior, junior);
+  		  		p.demo();
   			}
   		} catch (CoupInterditException e) {
   			e.printStackTrace();
